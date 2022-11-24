@@ -61,6 +61,16 @@ ul {
     margin-left: 20px;
 }
 
+.menu-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    /* display: none; */
+    z-index: 2;
+    font-size: 1.0em;
+}
+
 /* SHOWCASE */
 
 hr {
@@ -70,7 +80,7 @@ hr {
     width: 100%;
     height: 550px;
     background: url(./img/showcase2.jpg) no-repeat center center/cover;
-    padding-bottom: 50px;
+    padding: 50px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -223,4 +233,48 @@ hr {
     padding: 20px 0;
     padding-bottom: 20px;
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2F3640;
+        width: 50%;
+        border-right: #ccc 1px solid;
+        height: 100%;
+        padding: 30px;
+        opacity: 0.9;
+        /* transform: translateX(-400px); */
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .nav-menu ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+
+    .nav-main ul.nav-menu li {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+
+    .nav-main ul.nav-menu-right {
+        margin-right: 40px;
+    }
+
+    .news-cards {
+       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+        width: 80%;
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
